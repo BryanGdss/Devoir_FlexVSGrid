@@ -33,3 +33,70 @@ blockquote > footer > img {
   margin-right: 15px;
   border-radius: 50%;
 }
+
+
+/*body {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 100px 1fr 1fr 470px; 
+  grid-template-rows: 470px 470px; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Chaton-1 Chaton-1 Chaton-1 Quote"
+    ". . Chaton2 ."; 
+}
+.Chaton-1 {
+  grid-area: Chaton-1; 
+  width: 990px; 
+  height: 470px; 
+}
+.Quote {
+  align-self: end; 
+  grid-area: Quote; 
+  width: 470px; 
+  height: 210px; 
+}
+
+.Chaton2{
+  grid-area: Chaton2; 
+  width: 360px; 
+  height: 380px; 
+}
+ */
+
+ body {  display: grid;
+  grid-template-columns: 100px 1fr 1fr 470px;
+  grid-template-rows: 470px 470px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.Chaton1 {
+  grid-area: 1 / 1 / 1 / 4;
+  width: 990px;
+  height: 470px;
+}
+
+.Quote {
+  align-self: end;
+  grid-area: 1 / 4 / 1 / 5;
+  width: 470px;
+  height: 210px;
+}
+
+.Chaton2 {
+  grid-area: 2 / 2 / 3 / 4;
+  width: 360px;
+  height: 380px;
+}
+
+.Chaton3 {
+  justify-self: end;
+  grid-area: 2 / 3 / 2 / 5;
+  width: 990px;
+  height: 470px;
+}
+
